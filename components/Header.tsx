@@ -5,6 +5,9 @@ import { Grip } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import IconButton from "./IconButton";
 import Sidebar from "./Sidebar";
+import Search from "./Search";
+import { Suspense } from "react";
+import { SearchSkeleton } from "./Skeletons";
 
 function Header() {
   return (
@@ -17,10 +20,13 @@ function Header() {
         </Link>
       </div>
       <div className="flex items-center md:justify-between md:flex-1 max-w-lg lg:max-w-4xl xl:max-w-5xl">
-        {/* <Search /> */}
+        <Suspense fallback={<SearchSkeleton />}>
+          <Search />
+        </Suspense>
+
         <div className="flex items-center">
-<IconButton Icon={Grip} className="mr-3" />
-<UserButton afterSignOutUrl="/"/>
+          <IconButton Icon={Grip} className="mr-3" />
+          <UserButton afterSignOutUrl="/" />
         </div>
       </div>
     </header>
