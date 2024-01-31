@@ -25,3 +25,25 @@ export async function fetchAllForms() {
     throw new Error("Failed to fetch forms.");
   }
 }
+
+export async function fetchFormById(id: string) {
+  try {
+    const formData = await api.Forms.getFormByMarker(id);
+
+    return formData;
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to fetch form.");
+  }
+}
+
+export async function fetchAllFormsData() {
+  try {
+    const formsData = await api.FormData.getFormsData();
+
+    return formsData;
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to fetch forms data.");
+  }
+}
