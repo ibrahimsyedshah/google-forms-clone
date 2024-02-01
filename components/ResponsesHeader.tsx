@@ -11,7 +11,7 @@ async function ResponsesHeader({id}: {id: string}) {
     <Card>
         <CardHeader>
             <CardTitle className="font-normal">
-                {responses.length} {responses.length === 1 ? "Response" : "Responses"};
+                {responses.length} {responses.length === 1 ? "Response" : "Responses"}
             </CardTitle>
         </CardHeader>
 
