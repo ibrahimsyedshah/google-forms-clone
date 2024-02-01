@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export default function Home({
   searchParams: { error },
@@ -37,7 +38,10 @@ export default function Home({
   ];
 
   return (
-    <main className="">
+    <main className={cn(
+      "flex flex-col items-center justify-center min-h-screen p-6",
+      error ? "bg-gray-100" : "bg-background"
+    )}>
       {error ? (
         <AccessDenied />
       ) : (
