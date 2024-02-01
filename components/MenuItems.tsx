@@ -19,7 +19,8 @@ async function MenuItems() {
 
   return (
     <div className="flex flex-col border-y py-2">
-      {menuItems.pages.map((page) => (
+      {menuItems.pages//@ts-ignore
+      .map((page) => (
         <Button
           key={page.id}
           asChild
