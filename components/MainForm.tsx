@@ -128,13 +128,11 @@ function MainForm({
             </div>
           ) : (
             <div className="mt-6">
-              <Link
-                href={"https://portfolio.oneentry.cloud"}
-                className="text-purple-600 hover:text-purple-800"
-                target="_blank"
+              <span
+                className="text-purple-600"
               >
-                To make any edits to this form, please visit the oneentry cms.
-              </Link>
+                To make a submission, follow the public link found by clicking 'Send' in the top right corner.
+              </span>
             </div>
           )}
         </form>

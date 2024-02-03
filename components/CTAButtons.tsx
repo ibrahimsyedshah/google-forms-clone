@@ -9,7 +9,7 @@ function CTAButtons({className} : {className?: string}) {
         <Link href={"/dashboard"}>Get Started</Link>
       </Button>
       <Button asChild variant={'outline'}>
-        <Link href={"/learn-more"}>Learn More</Link>
+        <Link href={"https://www.google.com.au/forms/about/"} target="_blank">Learn More</Link>
       </Button>
     </div>
   );
