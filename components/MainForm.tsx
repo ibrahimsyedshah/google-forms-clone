@@ -131,7 +131,7 @@ function MainForm({
               <span
                 className="text-purple-600"
               >
-                To make a submission, follow the public link found by clicking 'Send' in the top right corner.
+                To make a submission, follow the public link found by clicking &apos;Send&apos; in the top right corner.
               </span>
             </div>
           )}
